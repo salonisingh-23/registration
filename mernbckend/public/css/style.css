@@ -1,0 +1,54 @@
+*{
+    margin:0;
+    padding:0;
+}
+h1{
+    text-align:center;
+    padding:20px;
+    font-style:bold;
+    color:white;
+}
+h2{
+    font-style:underline;
+    text-align:center;
+    padding:20px;
+}
+.register{
+    background:rgb(35, 46, 4);
+    width:500px;
+    margin:0px 0px 0px 430px;
+    color:white;
+    font-size:18;
+    padding:20px;
+    border-radius:10px;
+}
+body{
+    background-image:url("registimg2.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+#register{
+    margin-left:50px;
+}
+label{
+  color:white;
+  font-family:san-serif;
+  font-style:bold;
+  font-size:18px;
+}
+#name{
+    width:200px;
+    border:none;
+    border-radius:3px;
+    outline:0;
+    padding:7px;
+}
+#sub{
+    width:230px;
+    border:none;
+    border-radius:3px;
+    outline:0;
+    padding:7px;
+    font-style:bold;
+    color:black;
+}
