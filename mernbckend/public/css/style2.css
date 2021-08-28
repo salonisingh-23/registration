@@ -1,0 +1,55 @@
+*{
+    margin:0;
+    padding:0;
+}
+ h1{
+   background: #34495e;  /*tablebg e74c3c #34495e  #88565b ed7271*/
+     width:500px ; 
+    /* height: 4px; */ 
+    font-family: 'Roboto';
+ }   
+
+h2{
+    font-style:underline;
+    text-align:center;
+    padding:20px;
+}
+.login{
+    background:rgb(44, 40, 40);
+    width:500px;
+    height:300px;
+    margin: 120px 130px 100px 500px;
+    color:white;
+    font-size:18;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+}
+body{
+    background-image:url("login1.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+#log{
+   text-align:center;
+    color:white;
+    width:100px;
+    height:30px;
+    background-color:#34495e;
+    opacity:1;
+    cursor:pointer;
+}
+#name{
+    padding:2px;
+    font-family:Tahoma, Arial, Helvetica, sans-serif;
+    width:200px;
+ 
+}
+input:focus{
+    box-shadow:inset 4px 6px 10px -4px rgba(0,0,0,0.7), 0 1px 1px -1px rgba(255,255,255,0.3);
+    background:rgba(0,0,0,0.3);
+    /* @include easeme; */
+  }
+  a{
+      color:blue;
+  }

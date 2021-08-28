@@ -1,0 +1,120 @@
+
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    /* background:url("forget2.jpg"); 
+    */
+    background-color:rgb(221, 213, 213);
+  }
+  
+  /* sass variables used
+  $full:100%;
+  auto:0 auto;
+  align:center;
+  
+  @mixin disable{
+    outline:none;
+    border:none;
+  }
+  
+  @mixin easeme{
+    -webkit-transition:1s ease;
+    -moz-transition:1s ease;
+    -o-transition:1s ease;
+    -ms-transition:1s ease;
+    transition:1s ease;
+  } */
+  
+  /*site container*/
+  .wrapper{
+    width:420px;
+    margin:auto;
+  }
+  
+  h1{
+    text-align:left;
+    font:25px Oswald;
+    color:black;
+    font-size: bold;
+    font-family:New Century Schoolbook, TeX Gyre Schola, serif;
+    font-size:45px;
+    font-weight:700;
+    /* text-shadow:#000 0px 1px 5px; */
+    /* background-color:rgb(63, 61, 61); */
+    /* width:600px;
+    height:55px; */
+  
+  }
+  p{
+font-size:15px;
+font-family:Arial, sans-serif;
+color:rgb(53, 51, 51);
+align-items:left;
+  }
+  
+ 
+  #forget{
+    width:full;
+    background-color: #f8f6f6;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 400px;
+    width:500px;
+	text-align: center;
+    margin: 100px 500px 0px 470px;
+    border-radius:2px;
+  }
+  
+  /* input[type="text"]{
+    width:98%;
+    padding:15px 0px 15px 8px;
+    border-radius:5px;
+    box-shadow:inset 4px 6px 10px -4px rgba(0,0,0,0.3), 0 1px 1px -1px rgba(255,255,255,0.3);
+      background:rgba(0,0,0,0.2);
+    /* @include disable; */
+    /* border:1px solid rgba(0,0,0,1);
+    margin-bottom:10px;
+    color:#6E6E6E;
+    text-shadow:#000 0px 1px 5px;
+  } */ */
+  
+  .forget{
+    padding:15px;
+    border-radius:5px;
+    margin: 123px 123px 123px 123px;
+    /* @include disable; */
+    
+  }
+  
+  input:focus{
+    box-shadow:inset 4px 6px 10px -4px rgba(0,0,0,0.7), 0 1px 1px -1px rgba(255,255,255,0.3);
+    background:rgba(0,0,0,0.3);
+    /* @include easeme; */
+  }
+  
+  #sub{
+    opacity:1;
+    cursor:pointer;
+    background-color:rgb(50, 60, 150);
+    color:white;
+    width:123px;
+    height:23px;
+
+  }
+  
+  .optimize{
+    position:fixed;
+    right:3%;
+    top:0px;
+  }
+  label{
+ /* background-color:rgb(73, 72, 72); */
+ color:black;
+ font-style:bold;
+ font-weight:700;
+  }

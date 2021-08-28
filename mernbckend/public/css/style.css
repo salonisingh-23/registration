@@ -16,7 +16,9 @@ h2{
 .register{
     background:rgb(35, 46, 4);
     width:500px;
-    margin:0px 0px 0px 430px;
+     margin:150px 500px 0px 50px; 
+    align-items:center;
+    /* align-self: center; */
     color:white;
     font-size:18;
     padding:20px;
@@ -51,4 +53,13 @@ label{
     padding:7px;
     font-style:bold;
     color:black;
+    opacity:1;
+    cursor:pointer;
 }
+input:focus{
+    box-shadow:inset 4px 6px 10px -4px rgba(0,0,0,0.7), 0 1px 1px -1px rgba(255,255,255,0.3);
+    background:rgba(0,0,0,0.3);
+    /* @include easeme; */
+  }
+  
+
