@@ -1,0 +1,12 @@
+body{
+    background-image:url("Welcome-to-our-new-website.jpg");
+    background-repeat:no-repeat;
+     background-size: cover; 
+    /* background-size: 1500px; */
+
+}
+h1{
+    color:black;
+    background-color:white;
+    text-align:center;
+}
