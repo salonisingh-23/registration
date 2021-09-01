@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
+  <title>Blog</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="mb-1"><%= article.title %></h1>
+    <div class="text-muted mb-2">
+      <%= article.createdAt.toLocaleDateString() %>
+    </div>
+    <a href="/articles" class="btn btn-secondary">All Articles</a>
+    <a href="/articles/edit/<%= article.id %>" class="btn btn-info">Edit</a><span  style="color:blue;padding:3px;margin-left:820px; font-weight: bold;" id="liked"></span>
+   
+    <div>
+      <%- article.sanitizedHtml %>
+    </div>
+    <hr style="color:black; border-bottom:2px solid rgb(54, 156, 190)">
+
+    <div id="comments" style="background-color: lightgrey; height:40px; text-align: justify; font-weight: bold; padding-left:5px;"></div>
+    <!-- <form action="/articles/<%#= article.title %>?_method=PUT" method="POST"> -->
+    <input type="text" class="form-control mt-2" id="text" name="comment" placeholder="comment" style="color:rgb(123, 107, 228); font-weight: bold;">
+    <button class="mt-2 btn btn-secondary" onclick="showComments()" >comment</button>
+    <!-- </form> -->
+
+    <button id="like" style="background-color:lightblue" class="btn mt-2" onclick="liked()">Like</button>
+    </div>
+  </div>
+  <script>
+      function showComments() {
+          document.getElementById("comments").innerHTML="anonymous~    "+document.getElementById("text").value;
+          document.getElementById("text").value=" ";
+          
+      }
+      function liked(){
+          
+        //   if(innerHTML=="Post Liked"){
+        //       document.getElementById("liked").innerHTML="Post Disliked";
+        //   }
+          document.getElementById("liked").innerHTML="Post Liked";
+      }
+  </script>
+</body>
+</html>

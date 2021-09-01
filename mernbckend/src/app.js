@@ -2,9 +2,13 @@ const express = require('express');
 const app=express();
 const path=require("path");
 const hbs=require("hbs");
+// const ejs=require('ejs');
 require("./db/conn");
 const Register=require("./models/registers");
 const { json }=require("express");
+const Article = require('./models/articles');
+// const methodOverride = require('method-override');
+const articleRouter = require('./../routes/articles.js');
 const port=process.env.PORT || 3000;
 
 const static_path=path.join(__dirname,"../public");
@@ -92,7 +96,42 @@ res.status(400).send(error);
   }
 })
 
+app.use('/articles', articleRouter)
 
+
+app.get('/articles', async (req, res) => {
+    const articles = await Article.find().sort({ createdAt: 'desc' })
+    res.render('articles/index', { articles: articles })
+  })
+
+app.post("/articles",async(req,res)=>{
+
+    
+
+    // res.render('posts/home',{posts:posts})
+    try{
+            const email=req.body.sign_username;
+            const pass=req.body.sign_password;
+
+            const uname=await Register.findOne({email:email});
+
+            console.log(uname);
+            if(uname.pass===pass){
+
+                const articles = await Article.find().sort({ createdAt: 'desc' })
+                res.render('articles/index', { articles: articles })
+                // res.status(201).render("articles/index");
+                // res.render("articles/index.ejs",{posts:posts});
+            }
+            else{
+                res.send("<h1>Password/username did not match</h1>");
+            }
+    }
+    catch(error){
+            res.send("invalid username/password");
+        }
+    
+})
 app.listen(port,()=> {
     console.log(`server is running at port no ${port}`);
 })
